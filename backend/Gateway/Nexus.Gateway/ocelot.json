@@ -1,0 +1,252 @@
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/api/v1/auth/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "DownstreamPathTemplate": "/api/v1/auth/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "user-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/roles",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/v1/roles",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "user-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/users",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "DownstreamPathTemplate": "/api/v1/users",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "user-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/users/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "PATCH" ],
+      "DownstreamPathTemplate": "/api/v1/users/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "user-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/products",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "DownstreamPathTemplate": "/api/v1/products",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "catalog-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/products/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "DownstreamPathTemplate": "/api/v1/products/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "catalog-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/categories",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "DownstreamPathTemplate": "/api/v1/categories",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "catalog-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/categories/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "DownstreamPathTemplate": "/api/v1/categories/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "catalog-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/cart",
+      "UpstreamHttpMethod": [ "GET", "POST", "DELETE" ],
+      "DownstreamPathTemplate": "/api/v1/cart",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "commerce-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/cart/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "DownstreamPathTemplate": "/api/v1/cart/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "commerce-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/orders",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "DownstreamPathTemplate": "/api/v1/orders",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "commerce-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/orders/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "DownstreamPathTemplate": "/api/v1/orders/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "commerce-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/payment/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "DownstreamPathTemplate": "/api/v1/payment/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "commerce-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/auctions",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "DownstreamPathTemplate": "/api/v1/auctions",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "auction-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/auctions/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "DownstreamPathTemplate": "/api/v1/auctions/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "auction-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/inventory",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "DownstreamPathTemplate": "/api/v1/inventory",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "fulfillment-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/inventory/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "DownstreamPathTemplate": "/api/v1/inventory/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "fulfillment-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/shipments/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "DownstreamPathTemplate": "/api/v1/shipments/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "fulfillment-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/shipping/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "DownstreamPathTemplate": "/api/v1/shipping/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "fulfillment-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/notifications",
+      "UpstreamHttpMethod": [ "GET", "PATCH" ],
+      "DownstreamPathTemplate": "/api/v1/notifications",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "notification-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/notifications/{everything}",
+      "UpstreamHttpMethod": [ "GET", "PATCH", "DELETE" ],
+      "DownstreamPathTemplate": "/api/v1/notifications/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "notification-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/shops/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "DownstreamPathTemplate": "/api/v1/shops/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "user-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/seller/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "DownstreamPathTemplate": "/api/v1/seller/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "user-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/wallet",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/v1/wallet",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "user-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/wallet/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "DownstreamPathTemplate": "/api/v1/wallet/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "user-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/addresses",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "DownstreamPathTemplate": "/api/v1/addresses",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "user-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/addresses/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "PATCH" ],
+      "DownstreamPathTemplate": "/api/v1/addresses/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "user-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/returns",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "DownstreamPathTemplate": "/api/v1/returns",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "fulfillment-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/returns/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "DownstreamPathTemplate": "/api/v1/returns/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "fulfillment-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/vouchers",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "DownstreamPathTemplate": "/api/v1/vouchers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "commerce-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/vouchers/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "DownstreamPathTemplate": "/api/v1/vouchers/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "commerce-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/flashsales",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "DownstreamPathTemplate": "/api/v1/flashsales",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "auction-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/flashsales/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "DownstreamPathTemplate": "/api/v1/flashsales/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "auction-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/hubs/auction",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/hubs/auction",
+      "DownstreamScheme": "ws",
+      "DownstreamHostAndPorts": [{ "Host": "auction-service", "Port": 80 }]
+    },
+    {
+      "UpstreamPathTemplate": "/hubs/flashsale",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/hubs/flashsale",
+      "DownstreamScheme": "ws",
+      "DownstreamHostAndPorts": [{ "Host": "auction-service", "Port": 80 }]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://gateway"
+  }
+}
